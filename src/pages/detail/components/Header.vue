@@ -32,6 +32,7 @@ export default {
     }
   },
   methods: {
+    // 渐隐渐显效果
     handleScroll () {
       const top = document.documentElement.scrollTop
       if (top > 60) {

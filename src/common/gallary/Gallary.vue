@@ -29,7 +29,7 @@ export default {
     return {
       swiperOptions: {
         pagination: '.swiper-pagination',
-        paginationType: 'fraction',
+        paginationType: 'fraction', // 分页样式
         observeParents: true,
         observer: true
       }

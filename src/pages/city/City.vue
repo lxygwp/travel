@@ -15,6 +15,7 @@
 </template>
 
 <script>
+//  @change="handleLetterChange"  监听alphabet子组件传过来的   :letter="letter"  传给list子组件
 import axios from 'axios'
 import CityHeader from './components/Header'
 import CitySearch from './components/Search'
@@ -37,8 +38,7 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axios.get('/api/city.json')
-        .then(this.handleGetCityInfoSucc)
+      axios.get('/api/city.json').then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc (res) {
       res = res.data
@@ -50,6 +50,7 @@ export default {
     },
     handleLetterChange (letter) {
       this.letter = letter
+    //   console.log(this.letter)
     }
   },
   mounted () {
@@ -59,5 +60,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 </style>

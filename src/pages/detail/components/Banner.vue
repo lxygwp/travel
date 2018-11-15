@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" :src="bannerImg" />
+      <img class="banner-img" :src='bannerImg' />
       <div class="banner-info">
         <div class="banner-tittle">
           {{this.sightName}}
@@ -12,6 +12,7 @@
         </div>
       </div>
     </div>
+    <!-- 渐隐渐显动画效果 -->
     <fade-animation>
       <common-gallary
         :imgs="bannerImgs"
